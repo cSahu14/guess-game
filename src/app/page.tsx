@@ -45,7 +45,6 @@ export default function Home() {
         if (!p?.age || !p?.gender || !p?.country[0]) {
           setError('Error while fetching data.');
         }
-        console.log('p', p);
         if (p?.age) {
           setAge(p?.age);
         } else if (p?.gender) {
@@ -57,7 +56,6 @@ export default function Home() {
           let probable = Math.trunc(p?.country[0]?.probability * 100);
           setCountryProbability(probable);
         }
-        console.log('age is defined');
         setLoading(false);
       });
     } catch (error) {

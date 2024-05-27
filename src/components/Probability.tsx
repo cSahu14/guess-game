@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Probability = ({ probability }: { probability: number }) => {
-  console.log(probability);
   return (
     <div className='bg-white rounded-xl shadow-sm overflow-hidden p-1'>
       <div className='relative h-6 flex items-center justify-center'>
