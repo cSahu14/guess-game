@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -15,19 +16,92 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  border: 8px solid;
+  font-family: 'Josefin Sans', sans-serif;
 }
-
+::selection {
+  color: beige;
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+/* CSS */
+.inputStyle {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: #000;
+  outline: 0px solid;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  background-color: transparent;
+}
+.inputStyle::placeholder {
+  text-transform: uppercase;
+  color: #000;
+}
+.button-style {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px,
+    5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-style:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+.detail-div {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px,
+    5px 5px 0px 0px;
+  position: relative;
+}
+
+.detail-div:hover {
+  box-shadow: -1px -1px 0px 0px, -2px -2px 0px 0px, -3px -3px 0px 0px,
+    -4px -4px 0px 0px, -5px -5px 0px 0px;
+}
+
+@media (min-width: 768px) {
+  .button-style {
+    padding: 0.25em 0.75em;
   }
 }
